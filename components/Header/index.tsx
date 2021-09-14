@@ -2,40 +2,62 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./styles.module.css";
+import clsx from "clsx";
 
-const Header = () => {
+const nav = [
+  {
+    href: "/",
+    id: "home",
+    label: "Home",
+  },
+  {
+    id: "about",
+    href: "/about",
+    label: "About",
+  },
+  {
+    id: "programs",
+    href: "/programs",
+    label: "Programs",
+  },
+];
+
+const Header = ({
+  active = "home",
+}: {
+  active?: "home" | "about" | "programs";
+}) => {
   return (
     <header className="flex items-center justify-between px-16 py-10 space-x-3">
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center">
         <Image
           width={50}
           height={40}
           alt="cartalyst logo"
           src="/cartalyst-logo.png"
         />
-        <h4>Cartalyst</h4>
+        <h3>Cartalyst</h3>
       </div>
 
       <div>
         {/* <button>menu</button> */}
 
         <nav>
-          <ul className="flex sm:flex-row gap-14 sm:gap-16">
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Programs</a>
-              </Link>
-            </li>
+          <ul className="flex flex-col sm:flex-row gap-16 sm:gap-14">
+            {nav.map(({ id, label, href }) => (
+              <li key={id}>
+                <Link href={href}>
+                  <a
+                    className={clsx([
+                      styles.nav__item,
+                      id === active && styles["nav__item--active"],
+                    ])}
+                  >
+                    {label}
+                  </a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
