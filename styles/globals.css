@@ -1,3 +1,14 @@
+:root {
+  --base: 2.5vmin;
+  --radius: 1.25rem;
+  --h3: calc(1.5rem + var(--base));
+  --h1: calc(3.75rem + var(--base));
+  --body: calc(1.625rem + var(--base));
+
+  --primary: #130f49;
+  --secondary: #d9f4ff;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,16 +33,22 @@ a {
   text-decoration: none;
 }
 
-:root {
-  --base: 2.5vmin;
-  --radius: 1.25rem;
-  --h1: calc(3.75rem + var(--base));
-  --body: calc(1.625rem + var(--base));
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #130f49;
+}
+
+#__next {
+  height: 100%;
 }
 
 .button {
-  --bg: #130f49;
   --color: #fff;
+  --bg: var(--primary);
 
   border: none;
   font-weight: 500;
@@ -43,10 +60,16 @@ a {
 }
 
 .section {
-  @apply container mx-auto p-5;
+  @apply container flex flex-col items-center justify-center mx-auto p-5;
 }
 
 @media (pointer: fine) {
+  .section {
+    flex-direction: row;
+  }
+}
+
+@media (hover: none) {
   .expandable {
     width: 100%;
   }

@@ -1,1 +1,24 @@
+.image {
+  position: relative;
+}
 
+.image::after {
+  top: 0;
+  right: 0;
+  content: "";
+  z-index: -1;
+  width: 38rem;
+  height: 100%;
+  position: absolute;
+  background: url("/pink-blob.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (hover: none) {
+  .image::after {
+    top: 80%;
+    width: 23rem;
+    height: 28rem;
+  }
+}

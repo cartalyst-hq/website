@@ -36,7 +36,7 @@ const Header = ({
           alt="cartalyst logo"
           src="/cartalyst-logo.png"
         />
-        <h3>Cartalyst</h3>
+        <h2>Cartalyst</h2>
       </div>
 
       <div>
