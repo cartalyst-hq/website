@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <Header />
 
       <main className={styles.main}>
-        <section className={"section"}>
+        <section className="section justify-center p-5">
           <div className="sm:max-w-lg space-y-4">
             <h2 style={{ fontSize: "var(--h3)" }}>
               Empowering you to be relevant in the future of work
@@ -36,7 +36,32 @@ const Home: NextPage = () => {
             <button className="button expandable">start now</button>
           </div>
 
-          <Image alt="" width={540} height={555} src="/person-1.png" />
+          <div
+            className={styles.section__image}
+            style={{ backgroundImage: 'url("/person-1.png")' }}
+          ></div>
+        </section>
+
+        <section className="section justify-around px-5 py-64">
+          <div
+            style={{ backgroundImage: 'url("person-2.png")' }}
+            className={clsx([styles.section__image, "sm:!w-96"])}
+          ></div>
+
+          <div className="sm:max-w-lg space-y-4">
+            <h2 style={{ fontSize: "var(--heading)" }}>
+              Cartalyst accelerates talents
+            </h2>
+
+            <p className="text-gray-400" style={{ fontSize: "var(--body)" }}>
+              By incorporating leading technologies and industry certifications
+              to meet the highest areas of talents and employer demand.
+            </p>
+
+            <button className="button button--secondary expandable">
+              learn more
+            </button>
+          </div>
         </section>
       </main>
 

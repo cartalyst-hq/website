@@ -1,10 +1,13 @@
 :root {
-  --base: 2.5vmin;
   --radius: 1.25rem;
+
+  --base: 2.5vmin;
   --h3: calc(1.5rem + var(--base));
   --h4: calc(1.5rem + var(--base));
   --h1: calc(3.75rem + var(--base));
-  --body: calc(1.625rem + var(--base));
+
+  --body: calc(0.65rem + var(--base));
+  --heading: calc(2.5rem + var(--base));
 
   --primary: #130f49;
   --secondary: #d9f4ff;
@@ -60,8 +63,13 @@ h6 {
   border-radius: var(--radius);
 }
 
+.button--secondary {
+  --bg: var(--secondary);
+  --color: var(--primary);
+}
+
 .section {
-  @apply container flex flex-col items-center justify-center mx-auto p-5;
+  @apply container mx-auto;
 }
 
 .visually-hidden {
@@ -78,7 +86,11 @@ h6 {
 
 @media (pointer: fine) {
   .section {
+    width: 90%;
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
   }
 }
 
