@@ -1,0 +1,24 @@
+.wrapper {
+  gap: 3rem;
+  margin: auto;
+  display: flex;
+  /* align-items: center; */
+  border-radius: 3.5rem;
+  flex-direction: column;
+  justify-content: center;
+
+  @apply container sm:flex justify-around bg-secondary px-12 py-20;
+}
+
+.item__title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media (pointer: fine) {
+  .wrapper {
+    width: 95%;
+    flex-direction: row;
+  }
+}

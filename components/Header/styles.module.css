@@ -1,8 +1,59 @@
+.nav {
+  z-index: 10;
+}
+
 .nav__item {
   /* font-size: 1.3rem; */
-  font-size: 1rem;
+  font-size: 3rem;
 }
 
 .nav__item--active {
   color: #e35168;
+}
+
+.nav,
+.close-menu {
+  display: none;
+}
+
+.menu-wrapper {
+  z-index: 15;
+  position: relative;
+}
+
+.menu:checked ~ .open-menu {
+  display: none;
+}
+
+.menu:checked ~ .nav {
+  display: flex;
+}
+
+.menu:checked ~ .close-menu {
+  display: unset;
+}
+
+@media (hover: none) {
+  .nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: white;
+  }
+}
+
+@media (pointer: fine) {
+  .nav {
+    display: unset;
+  }
+
+  .menu-wrapper {
+    display: none;
+  }
+
+  .nav__item {
+    font-size: 1rem;
+  }
 }

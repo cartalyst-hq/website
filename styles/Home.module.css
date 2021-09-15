@@ -17,7 +17,7 @@
 
 @media (hover: none) {
   .image::after {
-    top: 80%;
+    top: 60%;
     width: 23rem;
     height: 28rem;
   }

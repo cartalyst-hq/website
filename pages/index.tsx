@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.css";
 import person1 from "../public/person-1.png";
 import person2 from "../public/person-2.png";
 import clsx from "clsx";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -38,6 +39,8 @@ const Home: NextPage = () => {
           <Image alt="" width={540} height={555} src="/person-1.png" />
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 };
