@@ -4,7 +4,7 @@
   --base: 2.5vmin;
   --h3: calc(1.5rem + var(--base));
   --h4: calc(1.5rem + var(--base));
-  --h1: calc(3.75rem + var(--base));
+  --h1: calc(3.5rem + var(--base));
 
   --body: calc(0.65rem + var(--base));
   --heading: calc(2.5rem + var(--base));
@@ -69,7 +69,7 @@ h6 {
 }
 
 .section {
-  @apply container mx-auto;
+  @apply container mx-auto space-x-4;
 }
 
 .visually-hidden {
@@ -86,7 +86,7 @@ h6 {
 
 @media (pointer: fine) {
   .section {
-    width: 90%;
+    width: 85%;
     display: flex;
     flex-direction: row;
     align-items: center;

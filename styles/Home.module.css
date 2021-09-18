@@ -1,3 +1,7 @@
+.main {
+  @apply space-y-16;
+}
+
 .image {
   position: relative;
 }
@@ -8,7 +12,7 @@
   content: "";
   z-index: -1;
   height: 115%;
-  width: 39.5rem;
+  width: 42rem;
   position: absolute;
   background: url("/pink-blob.svg") no-repeat;
   background-size: cover;
@@ -24,17 +28,76 @@
   background-repeat: no-repeat;
 }
 
+.pitch__decor::after {
+  top: 0;
+  left: -40%;
+  content: "";
+  z-index: -1;
+  height: 62%;
+  width: 45rem;
+  position: absolute;
+  background: url("/peach-blob.svg") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.tile {
+  width: 10rem;
+  height: 15rem;
+  border-radius: 1.8rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.pitch__item {
+  @apply space-x-12;
+
+  display: flex;
+  align-items: center;
+}
+
+.marker {
+  width: 4rem;
+  padding: 1rem;
+  border-radius: 0.95rem;
+  transform: rotate(45deg);
+}
+
+.marker__image {
+  transform: rotate(-45deg);
+}
+
+.pitch__item__text {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
 @media (hover: none) {
   .image::after {
     top: 60%;
     width: 22rem;
     height: 28rem;
   }
+
+  .pitch__decor {
+    @apply space-y-32 overflow-hidden;
+  }
 }
 
 @media (pointer: fine) {
+  .main {
+    @apply space-y-40;
+  }
+
   .section__image {
     width: 50rem;
     height: 30rem;
+  }
+
+  .pitch__decor::after {
+    top: 0;
+    left: -28%;
+    height: 125%;
+    width: 75rem;
   }
 }
