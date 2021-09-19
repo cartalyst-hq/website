@@ -36,39 +36,32 @@ const Home: NextPage = () => {
 
         <section className="section !mt-80">
           <ul className={styles.chips}>
-            <li
-              className={clsx([
-                styles.chip,
-                styles["chip--pink"],
-                "sm:max-w-xs",
-                "space-y-4",
-              ])}
-            >
+            <li className="relative sm:max-w-xs space-y-4">
+              <div
+                className={clsx([styles.chip, styles["chip--yellow"]])}
+                style={{ backgroundImage: "url(/pink-blob-chip.png)" }}
+              />
+
               <h2 style={{ fontSize: "var(--h3)" }}>Our goal</h2>
 
-              <p>
+              <p className="text-lg">
                 Our goal is to close the global digital skill gap and accelerate
                 the employability of African talents in the fourth industrial
                 revolution and beyond.
               </p>
             </li>
 
-            <li
-              className={clsx([
-                styles.chip,
-                styles["chip--yellow"],
-                "sm:max-w-xs",
-                "self-end",
-                "space-y-4",
-              ])}
-              style={{ backgroundImage: "url(/yellow-blob-chip.png)" }}
-            >
-              <h2 style={{ fontSize: "var(--h3)" }}>Our goal</h2>
+            <li className="self-end relative sm:max-w-xs space-y-4">
+              <div
+                className={clsx([styles.chip, styles["chip--yellow"]])}
+                style={{ backgroundImage: "url(/yellow-blob-chip.png)" }}
+              />
 
-              <p>
-                Our goal is to close the global digital skill gap and accelerate
-                the employability of African talents in the fourth industrial
-                revolution and beyond.
+              <h2 style={{ fontSize: "var(--h3)" }}>Our mission</h2>
+
+              <p className="text-lg">
+                We&apos;re on a mission to close the digital skills divide
+                between industry leaders and academia.
               </p>
             </li>
           </ul>
@@ -93,14 +86,16 @@ const Home: NextPage = () => {
             "!block",
             "relative",
             "px-5",
-            "py-40",
+            "py-24",
             "sm:!mb-40",
             "space-y-12",
             "sm:space-y-0",
           ])}
         >
           <div className={styles.method_title}>
-            <h1 style={{ fontSize: "var(--h3)" }}>How are we doing this?</h1>
+            <h1 className="text-primary" style={{ fontSize: "var(--h3)" }}>
+              How are we doing this?
+            </h1>
           </div>
 
           <ul className={clsx([styles.method_list, "sm:!m-0", "space-y-12"])}>
@@ -165,6 +160,42 @@ const Home: NextPage = () => {
               </p>
             </li>
           </ul>
+        </section>
+
+        <section className={clsx(["section", styles.contact, "px-5", "py-40"])}>
+          <div className={styles.contact_title}>
+            <div className="sm:ml-[20%] sm:max-w-[10rem]">
+              <h2>Get in touch</h2>
+            </div>
+          </div>
+
+          <form action="/contact" method="post" className={styles.form}>
+            <div className="sm:flex gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                className={styles.input_field}
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                className={styles.input_field}
+              />
+            </div>
+
+            <textarea
+              cols={30}
+              rows={10}
+              name="message"
+              className={styles.input_field}
+              placeholder="Enter your message"
+            ></textarea>
+
+            <button className="button sm:w-min">submit</button>
+          </form>
         </section>
       </main>
 
