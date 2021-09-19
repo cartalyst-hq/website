@@ -86,6 +86,86 @@ const Home: NextPage = () => {
             <button className="button button--secondary">see programs</button>
           </div>
         </section>
+
+        <section
+          className={clsx([
+            "section",
+            "!block",
+            "relative",
+            "px-5",
+            "py-40",
+            "sm:!mb-40",
+            "space-y-12",
+            "sm:space-y-0",
+          ])}
+        >
+          <div className={styles.method_title}>
+            <h1 style={{ fontSize: "var(--h3)" }}>How are we doing this?</h1>
+          </div>
+
+          <ul className={clsx([styles.method_list, "sm:!m-0", "space-y-12"])}>
+            <li
+              className={clsx([
+                styles.method_list__item,
+                styles["method_list__item--one"],
+              ])}
+            >
+              <div className="marker bg-[#FECFD0]">
+                <p className="marker__image text-2xl font-medium">1</p>
+              </div>
+
+              <p className="pitch__item__text">Career path advisory</p>
+            </li>
+
+            <li
+              className={clsx([
+                styles.method_list__item,
+                styles["method_list__item--two"],
+              ])}
+            >
+              <div className="marker bg-[#D9F4FF]">
+                <p className="marker__image text-2xl font-medium">2</p>
+              </div>
+
+              <p className="pitch__item__text">
+                Fourth industrial revolution driven training co-created with
+                leading digital companies
+              </p>
+            </li>
+
+            <li
+              className={clsx([
+                styles.method_list__item,
+                styles["method_list__item--three"],
+              ])}
+            >
+              <div className="marker bg-[#FEDFB1]">
+                <p className="marker__image text-2xl font-medium">3</p>
+              </div>
+
+              <p className="pitch__item__text">
+                Collaborative learning with mentors and peers to enhance career
+                growth with project portfolios demonstrating critical technical
+                and enterprise skills
+              </p>
+            </li>
+
+            <li
+              className={clsx([
+                styles.method_list__item,
+                styles["method_list__item--four"],
+              ])}
+            >
+              <div className="marker bg-[#FECFD0]">
+                <p className="marker__image text-2xl font-medium">4</p>
+              </div>
+
+              <p className="pitch__item__text">
+                Career accelerator programs and continuous education
+              </p>
+            </li>
+          </ul>
+        </section>
       </main>
 
       <Footer />

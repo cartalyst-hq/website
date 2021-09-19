@@ -45,3 +45,73 @@
 .chip--yellow::after {
   background-image: url("/yellow-blob-chip.png");
 }
+
+/* .method_title {
+  @apply sm:max-w-sm;
+} */
+
+.method_list__item {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+}
+
+@media (pointer: fine) {
+  .method_title {
+    margin: auto;
+    height: 20rem;
+    display: flex;
+    max-width: 20rem;
+    text-align: center;
+    align-items: center;
+    border-radius: 100%;
+    justify-content: center;
+    border: 2px dashed var(--primary);
+  }
+
+  .method_list {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .method_list__item {
+    @apply sm:max-w-sm;
+    position: absolute;
+  }
+
+  .method_list__item--one,
+  .method_list__item--three {
+    flex-direction: row-reverse;
+  }
+
+  .method_list__item--one {
+    top: 25%;
+    left: 11%;
+  }
+
+  .method_list__item--two {
+    top: -3%;
+    left: 58%;
+    align-items: flex-end;
+  }
+
+  .method_list__item--three {
+    top: 40%;
+    left: 7%;
+    align-items: flex-start;
+  }
+
+  .method_list__item--three,
+  .method_list__item--four {
+    top: 55%;
+    align-items: flex-start;
+  }
+
+  .method_list__item--four {
+    left: 58%;
+  }
+}

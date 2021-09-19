@@ -76,7 +76,7 @@ h6 {
   @apply space-y-16;
 }
 
-.hero {
+/* .hero {
   position: relative;
 }
 
@@ -91,6 +91,31 @@ h6 {
   background: url("/pink-blob.svg") no-repeat;
   background-size: cover;
   background-position: center;
+} */
+
+.pitch__item {
+  @apply space-x-12 text-primary;
+
+  display: flex;
+  align-items: center;
+}
+
+.marker {
+  min-width: 4rem;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.95rem;
+  transform: rotate(45deg);
+}
+
+.marker__image {
+  margin: auto;
+  transform: rotate(-45deg);
+}
+
+.pitch__item__text {
+  font-weight: 600;
+  font-size: calc(0.5rem + var(--base));
 }
 
 .visually-hidden {
