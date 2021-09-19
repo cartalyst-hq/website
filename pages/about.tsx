@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
-    <div className={clsx([styles.image, "h-full"])}>
+    <div className={clsx([styles.image, "h-full", "overflow-x-hidden"])}>
       <Head>
         <title>Cartalyst | About</title>
         <meta name="description" content="Cartalyst" />
@@ -34,35 +34,39 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className="section !mt-80">
+        <section className="section justify-center p-5 !mt-30">
           <ul className={styles.chips}>
-            <li className="relative sm:max-w-xs space-y-4">
+            <li className={styles.chip}>
               <div
-                className={clsx([styles.chip, styles["chip--yellow"]])}
+                className={clsx([styles.chip__decor, styles["chip--yellow"]])}
                 style={{ backgroundImage: "url(/pink-blob-chip.png)" }}
               />
 
-              <h2 style={{ fontSize: "var(--h3)" }}>Our goal</h2>
+              <div>
+                <h2 style={{ fontSize: "var(--h3)" }}>Our goal</h2>
 
-              <p className="text-lg">
-                Our goal is to close the global digital skill gap and accelerate
-                the employability of African talents in the fourth industrial
-                revolution and beyond.
-              </p>
+                <p className="text-lg">
+                  Our goal is to close the global digital skill gap and
+                  accelerate the employability of African talents in the fourth
+                  industrial revolution and beyond.
+                </p>
+              </div>
             </li>
 
-            <li className="self-end relative sm:max-w-xs space-y-4">
+            <li className={clsx([styles.chip, "sm:!mt-96"])}>
               <div
-                className={clsx([styles.chip, styles["chip--yellow"]])}
+                className={clsx([styles.chip__decor, styles["chip--yellow"]])}
                 style={{ backgroundImage: "url(/yellow-blob-chip.png)" }}
               />
 
-              <h2 style={{ fontSize: "var(--h3)" }}>Our mission</h2>
+              <div>
+                <h2 style={{ fontSize: "var(--h3)" }}>Our mission</h2>
 
-              <p className="text-lg">
-                We&apos;re on a mission to close the digital skills divide
-                between industry leaders and academia.
-              </p>
+                <p className="text-lg">
+                  We&apos;re on a mission to close the digital skills divide
+                  between industry leaders and academia.
+                </p>
+              </div>
             </li>
           </ul>
         </section>
@@ -170,7 +174,7 @@ const Home: NextPage = () => {
           </div>
 
           <form action="/contact" method="post" className={styles.form}>
-            <div className="sm:flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="text"
                 name="name"
