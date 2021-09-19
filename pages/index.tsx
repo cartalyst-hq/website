@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <main className={styles.main}>
+      <main className="main">
         <section className="section justify-center p-5">
           <div className="sm:max-w-lg space-y-4">
             <h2 style={{ fontSize: "var(--h3)" }}>

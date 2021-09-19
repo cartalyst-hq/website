@@ -1,7 +1,3 @@
-.main {
-  @apply space-y-16;
-}
-
 .image {
   position: relative;
 }
