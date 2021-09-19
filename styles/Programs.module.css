@@ -1,0 +1,35 @@
+.decor {
+  width: 25rem;
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section {
+  gap: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  @apply sm:flex-row sm:items-center;
+}
+
+.section__container {
+  @apply sm:max-w-xl p-4 text-primary space-y-6;
+}
+
+.col-reverse {
+  flex-direction: column-reverse;
+}
+
+@media (pointer: fine) {
+  .decor {
+    width: 30rem;
+    height: 50rem;
+  }
+
+  .col-reverse {
+    flex-direction: initial;
+  }
+}

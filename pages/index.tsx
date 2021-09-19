@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       <main className="main">
         <section className="section justify-center p-5">
           <div className="sm:max-w-lg space-y-4">
-            <h2 style={{ fontSize: "var(--h3)" }}>
+            <h2 className="text-primary" style={{ fontSize: "var(--h3)" }}>
               Empowering you to be relevant in the future of work
             </h2>
 
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           />
 
           <div className="sm:max-w-lg space-y-4">
-            <h2 style={{ fontSize: "var(--heading)" }}>
+            <h2 className="text-primary" style={{ fontSize: "var(--heading)" }}>
               Cartalyst accelerates talents
             </h2>
 
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
           ])}
         >
           <div className="space-y-4">
-            <h2 style={{ fontSize: "var(--heading)" }}>
+            <h2 className="text-primary" style={{ fontSize: "var(--heading)" }}>
               Aligning study path with required digital skills
             </h2>
 

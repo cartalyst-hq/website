@@ -1,16 +1,11 @@
-import type { NextPage } from "next";
 import clsx from "clsx";
+import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import styles from "../styles/About.module.css";
 
-import Percent from "../public/percent.svg";
-import Timeline from "../public/trending_up.svg";
-import Search from "../public/search.svg";
-import Footer from "../components/Footer";
-
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <div className={clsx([styles.image, "h-full", "overflow-x-hidden"])}>
       <Head>
@@ -22,11 +17,11 @@ const Home: NextPage = () => {
       <Header active="about" />
 
       <main className="main">
-        <section className="section justify-center p-5">
+        <section className="section justify-center text-primary p-5">
           <div className="text-center sm:max-w-lg space-y-4">
             <h2 style={{ fontSize: "var(--h1)" }}>About Us</h2>
 
-            <p className="text-2xl text-primary">
+            <p className="text-2xl">
               We believe Education should not be limited to classrooms in a
               world where technology offers limitless opportunities. As
               technology develops, reskilling is mandatory.
@@ -45,7 +40,7 @@ const Home: NextPage = () => {
               <div>
                 <h2 style={{ fontSize: "var(--h3)" }}>Our goal</h2>
 
-                <p className="text-lg">
+                <p className="sm:max-w-[80%] mx-auto text-lg">
                   Our goal is to close the global digital skill gap and
                   accelerate the employability of African talents in the fourth
                   industrial revolution and beyond.
@@ -62,7 +57,7 @@ const Home: NextPage = () => {
               <div>
                 <h2 style={{ fontSize: "var(--h3)" }}>Our mission</h2>
 
-                <p className="text-lg">
+                <p className="sm:max-w-[80%] mx-auto text-lg">
                   We&apos;re on a mission to close the digital skills divide
                   between industry leaders and academia.
                 </p>
@@ -73,7 +68,7 @@ const Home: NextPage = () => {
 
         <section className="section p-5">
           <div className="sm:max-w-sm space-y-6">
-            <h2 style={{ fontSize: "var(--h3)" }}>Think!</h2>
+            <h2 className={clsx([styles.title, "text-primary"])}>Think!</h2>
 
             <p className="text-2xl text-gray-400">
               Future of Education meets the Future of Work to Africa’s digital
@@ -97,7 +92,7 @@ const Home: NextPage = () => {
           ])}
         >
           <div className={styles.method_title}>
-            <h1 className="text-primary" style={{ fontSize: "var(--h3)" }}>
+            <h1 className={clsx([styles.title, "text-primary"])}>
               How are we doing this?
             </h1>
           </div>
@@ -166,8 +161,16 @@ const Home: NextPage = () => {
           </ul>
         </section>
 
-        <section className={clsx(["section", styles.contact, "px-5", "py-40"])}>
-          <div className={styles.contact_title}>
+        <section
+          className={clsx([
+            "section",
+            styles.contact,
+            "px-5",
+            "sm:pt-40",
+            "pb-40",
+          ])}
+        >
+          <div className={clsx([styles.title, styles.contact_title])}>
             <div className="sm:ml-[20%] sm:max-w-[10rem]">
               <h2>Get in touch</h2>
             </div>
@@ -208,4 +211,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default About;

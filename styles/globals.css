@@ -57,7 +57,7 @@ h6 {
   border: none;
   font-weight: 500;
   color: var(--color);
-  padding: 1.5rem 3rem;
+  padding: 1.3rem 3rem;
   text-transform: capitalize;
   background-color: var(--bg);
   border-radius: var(--radius);
@@ -68,30 +68,19 @@ h6 {
   --color: var(--primary);
 }
 
+.button--outline {
+  --bg: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
 .section {
-  @apply container mx-auto space-x-4;
+  @apply sm:w-[85%] container mx-auto space-x-4;
 }
 
 .main {
   @apply space-y-16;
 }
-
-/* .hero {
-  position: relative;
-}
-
-.hero::after {
-  top: 0;
-  right: 0;
-  content: "";
-  z-index: -1;
-  height: 115%;
-  width: 42rem;
-  position: absolute;
-  background: url("/pink-blob.svg") no-repeat;
-  background-size: cover;
-  background-position: center;
-} */
 
 .pitch__item {
   @apply space-x-12 text-primary;
@@ -130,13 +119,18 @@ h6 {
   clip: rect(0 0 0 0);
 }
 
+@supports (display: flex) {
+  .section {
+    @apply space-x-0;
+  }
+}
+
 @media (pointer: fine) {
   .section {
-    width: 85%;
+    gap: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: center; */
   }
 }
 

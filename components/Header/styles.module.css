@@ -5,6 +5,7 @@
 .nav__item {
   /* font-size: 1.3rem; */
   font-size: 3rem;
+  color: var(--primary);
 }
 
 .nav__item--active {
