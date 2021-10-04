@@ -10,7 +10,7 @@
   height: 60%;
   width: 25rem;
   position: absolute;
-  background: url("/blue-blob.png") no-repeat;
+  background: url("/blue-blob-squoosh.png") no-repeat;
   background-size: contain;
   background-position: center;
 }
