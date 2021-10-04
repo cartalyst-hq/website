@@ -10,8 +10,8 @@ const About: NextPage = () => {
     <div className={clsx([styles.image, "h-full", "overflow-x-hidden"])}>
       <Head>
         <title>Cartalyst | About</title>
-        <meta name="description" content="Cartalyst" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <meta name="description" content="Cartalyst" /> */}
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <Header active="about" />
@@ -34,7 +34,7 @@ const About: NextPage = () => {
             <li className={styles.chip}>
               <div
                 className={clsx([styles.chip__decor, styles["chip--yellow"]])}
-                style={{ backgroundImage: "url(/pink-blob-chip.png)" }}
+                style={{ backgroundImage: "url(/pink-blob-chip-squoosh.webp)" }}
               />
 
               <div>
@@ -51,7 +51,9 @@ const About: NextPage = () => {
             <li className={clsx([styles.chip, "sm:!mt-96"])}>
               <div
                 className={clsx([styles.chip__decor, styles["chip--yellow"]])}
-                style={{ backgroundImage: "url(/yellow-blob-chip.png)" }}
+                style={{
+                  backgroundImage: "url(/yellow-blob-chip-squoosh.webp)",
+                }}
               />
 
               <div>

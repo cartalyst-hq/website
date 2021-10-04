@@ -10,8 +10,8 @@ const Programs: NextPage = () => {
     <div className={clsx([styles.image, "h-full", "overflow-x-hidden"])}>
       <Head>
         <title>Cartalyst | Programs</title>
-        <meta name="description" content="Cartalyst" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <meta name="description" content="Cartalyst" />
+        <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <Header active="programs" />
@@ -34,7 +34,7 @@ const Programs: NextPage = () => {
         <section className={styles.section}>
           <div
             className={clsx([styles.decor, "!h-[40rem]", "left-0"])}
-            style={{ backgroundImage: "url(/group-2.png)" }}
+            style={{ backgroundImage: "url(/group-2-squoosh.webp)" }}
           />
 
           <div className={styles.section__container}>
@@ -93,13 +93,13 @@ const Programs: NextPage = () => {
 
           <div
             className={clsx([styles.decor, "left-0"])}
-            style={{ backgroundImage: "url(/group-3.png)" }}
+            style={{ backgroundImage: "url(/group-3-squoosh.webp)" }}
           />
         </section>
 
         <section className={styles.section}>
           <div
-            style={{ backgroundImage: "url(/group-1.png)" }}
+            style={{ backgroundImage: "url(/group-1-squoosh.webp)" }}
             className={clsx([styles.decor, "!h-[40rem]", "left-0"])}
           />
 
@@ -206,7 +206,7 @@ const Programs: NextPage = () => {
 
           <div
             className={clsx([styles.decor, "left-0"])}
-            style={{ backgroundImage: "url(/group-4.png)" }}
+            style={{ backgroundImage: "url(/group-4-squoosh.webp)" }}
           />
         </section>
 

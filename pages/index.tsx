@@ -15,8 +15,8 @@ const Home: NextPage = () => {
     <div className={clsx([styles.image, "h-full"])}>
       <Head>
         <title>Cartalyst | Home</title>
-        <meta name="description" content="Cartalyst" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <meta name="description" content="Cartalyst" />
+        <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <Header />
@@ -39,14 +39,14 @@ const Home: NextPage = () => {
 
           <div
             className={styles.section__image}
-            style={{ backgroundImage: 'url("/person-1.png")' }}
+            style={{ backgroundImage: 'url("/person-1-squoosh.webp")' }}
           />
         </section>
 
         <section className="section justify-around p-5">
           <div
-            style={{ backgroundImage: 'url("person-2.png")' }}
             className={clsx([styles.section__image, "sm:!w-96"])}
+            style={{ backgroundImage: 'url("/person-2-squoosh.webp")' }}
           />
 
           <div className="sm:max-w-lg space-y-4">
@@ -80,23 +80,23 @@ const Home: NextPage = () => {
               <li className="mt-16 space-y-4">
                 <div
                   className={styles.tile}
-                  style={{ backgroundImage: "url(/tile-2.jpeg)" }}
+                  style={{ backgroundImage: "url(/tile-2-squoosh.webp)" }}
                 />
 
                 <div
                   className={styles.tile}
-                  style={{ backgroundImage: "url(/tile-4.jpeg)" }}
+                  style={{ backgroundImage: "url(/tile-4-squoosh.webp)" }}
                 />
               </li>
               <li className="space-y-4">
                 <div
                   className={styles.tile}
-                  style={{ backgroundImage: "url(/tile-3.jpeg)" }}
+                  style={{ backgroundImage: "url(/tile-3-squoosh.webp)" }}
                 />
 
                 <div
                   className={styles.tile}
-                  style={{ backgroundImage: "url(/tile-1.jpeg)" }}
+                  style={{ backgroundImage: "url(/tile-1-squoosh.webp)" }}
                 />
               </li>
             </ul>
